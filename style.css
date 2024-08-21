@@ -11,6 +11,10 @@ body {
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   background-image: url(/img/bg-1.png);
   background-repeat: no-repeat;
@@ -33,15 +37,15 @@ main h1 {
 
 main h3 {
   color: #FFF;
-text-align: center;
-text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-font-family: Montserrat;
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-max-width: 657px;
-margin: 0 auto;
+  text-align: center;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 657px;
+  margin: 0 auto;
 }
 
 .header {
@@ -50,8 +54,8 @@ margin: 0 auto;
   justify-content: space-between;
 }
 
-.logo {
-}
+.logo {}
+
 .menu__items {
   display: flex;
   align-items: center;
@@ -63,46 +67,206 @@ margin: 0 auto;
   gap: 56px;
 
 }
+
 .menu__item_link {
   text-decoration: none;
   color: #FFF;
   transition: all .3s;
 }
+
 .menu__item_link:hover {
   font-weight: 600;
   transition: all .3s;
 }
 
 .header__contacts {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
+
+.header__phone a {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
 .header__phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
+
+.header__contacts button {
+  text-transform: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  color: #FFF;
+  border-radius: 40px;
+  border: solid 1px #EF8548;
+  display: flex;
+  padding: 8px 12px 8px 8px;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+}
+
 .tab__items {
   display: flex;
   list-style: none;
   margin: 80px auto 0;
   border-radius: 33px;
-background: rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.20);
   padding: 4px;
-box-shadow: 0px 2px 6px 0px rgba(33, 32, 61, 0.24);
-backdrop-filter: blur(3px);
-max-width: 605px;
+  box-shadow: 0px 2px 6px 0px rgba(33, 32, 61, 0.24);
+  backdrop-filter: blur(3px);
+  max-width: 605px;
 
-  
+
 }
+
 .tab__item {
   color: #FFF;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 150%; 
-display: flex;
-padding: 16px 60px;
-align-items: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  display: flex;
+  padding: 16px 60px;
+  align-items: center;
+  cursor: pointer;
 }
 
 .tab__item.active {
   border-radius: 32px;
   background: #EF8548;
+}
+
+
+.vacancy {}
+
+.vacancy__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 38px 0 0 0;
+}
+
+.vacancy__item {
+  border-radius: 24px;
+  border: solid 1px #D7E6EE;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  flex: 1 0 0;
+  background: #FFF;
+  gap: 8px;
+  cursor: pointer;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.vacancy__item:hover {
+  border-radius: 24px;
+  border: solid 1px #EF8548;
+  transition: all .3s;
+  background: #FFF;
+  box-shadow: 0px 16px 16px 0px rgba(38, 38, 38, 0.09), 0px 4px 9px 0px rgba(38, 38, 38, 0.10);
+}
+
+.vacancy__item:hover span {
+  opacity: 1;
+  transition: all .5s;
+}
+
+.vacancy__item span {
+  width: 190px;
+  height: 190px;
+  background: #EF8548;
+  border-radius: 50%;
+  position: absolute;
+  right: -45px;
+  top: -30px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: all .5s;
+  mix-blend-mode: darken;
+}
+
+.vacancy__item span::before {
+  content: '';
+  display: inline-block;
+  background: #EF8548;
+  width: 247px;
+  height: 247px;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;
+  right: -20px;
+  z-index: 1;
+  opacity: .1;
+}
+
+.vacancy__item span::after {
+  content: '';
+  display: inline-block;
+  background: #EF8548;
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  z-index: 1;
+  opacity: .2;
+}
+
+
+.vacancy__item_city {
+  color: #EF8548;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.vacancy__item_name {
+  color: #18191D;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.vacancy__item_salary {
+  color: #18191D;
+
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.vacancy__item_type {
+  color: #18191D;
+  opacity: 0.4;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%
 }
