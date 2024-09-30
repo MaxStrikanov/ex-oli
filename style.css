@@ -1,7 +1,14 @@
+@import url(/css/font.css);
+
 .container {
   width: min(100% - 1em, 1312px);
   margin-inline: auto;
   position: relative;
+}
+
+* {
+  box-sizing: border-box;
+
 }
 
 body {
@@ -500,9 +507,6 @@ section.maps {
   margin: 103px;
 }
 
-.title__wrapper {
-}
-
 .title__text {
   color: #1B2D3B;
   font-size: 16px;
@@ -511,8 +515,7 @@ section.maps {
   line-height: 160%;
   max-width: 792px;
 }
-.values__items {
-}
+
 .values__item {
   display: flex;
   padding: 32px 24px;
@@ -1009,4 +1012,216 @@ ul.sub__menu_items {
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.vacancy__wrapper {
+  margin: 48px 0 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.vacancy__detail {
+  max-width: 40.89vw;
+}
+
+.vacancy__header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vacancy__tag_items {
+  display: flex;
+  gap: 8px;
+}
+.vacancy__tag_item {
+  display: flex;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.vacancy__tag_item.primary {
+  color: #FFF;
+  background: #EF8548;
+  border: 1px solid #EF8548;
+}
+.vacancy__tag_item.secondary {
+  color: #EF8548;
+  border: 1px solid #EF8548;
+}
+.vacancy__name {
+  color: #223642;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-family: Montserrat;
+}
+.vacancy__title-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vacancy__title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.vacancy__company {
+  color: #223642;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.7;
+  font-family: Montserrat;
+}
+.vacancy__address {
+  color: #EF8548;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  font-family: Montserrat;
+}
+.map__btn {
+  display: flex;
+  padding: 4px 16px 4px 4px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 40px;
+  border: 1px solid #D7E6EE;
+  background: #F8F9FA;
+}
+.map__btn_text {
+  color: #18191D;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%
+}
+.vacancy__detail_text {
+  margin: 26px 0 0;
+}
+.vacancy__responsibilities, 
+.vacancy__working, 
+.vacancy__requirement {
+  margin: 30px 0 26px;
+  display: inline-block;
+}
+.vacancy__detail_caption {
+  color: #18191D;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%
+}
+
+.vacancy__detail_list {
+  padding: 0 0 0 20px;
+}
+.vacancy__detail_list ul li {
+  color: #344650;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  list-style-image: url(/img/marker.svg);
+  margin: 8px 0;
+}
+
+.vacancy__card {
+  display: flex;
+  width: 416px;
+  padding: 48px 32px 24px 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  border-radius: 40px;
+  border: 1px solid #D7E6EE;
+  background: #F8F9FA;
+  
+}
+.vacancy__card_title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.vacancy__card_property {
+  color: #18191D;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.vacancy__card_value {
+  color: #18191D;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%
+}
+.vacancy__card_price {
+  color: #18191D;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  display: flex;
+  gap: 10px;
+}
+.vacancy__card_btns {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.vacancy__card_btn {
+  display: flex;
+  height: 59px;
+  padding: 20px 60px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 39px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.primary {
+  background: #EF8548;
+  color: #FFF;
+  border: 2px solid #EF8548;
+  box-shadow: 0px 0px 15.8px 0px rgba(239, 133, 72, 0.41);
+}
+.secondary {
+  border: 2px solid #EF8548;
+  color: #EF8548;
+  box-shadow: 0px 0px 15.8px 0px rgba(239, 133, 72, 0.41);
+}
+
+.vacancy__card_btn.secondary a{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  color: #EF8548;
+  text-decoration-line: underline;
+}
+.vacancy__card_company {
+  color: #18191D;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  opacity: 0.4;
+  text-align: center;
+  margin: 0 auto;
 }

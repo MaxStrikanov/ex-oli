@@ -1,5 +1,5 @@
-import './style.css'
-import 'normalize.css'
+import 'reset-css';
+import './style.css';
 
 
 
